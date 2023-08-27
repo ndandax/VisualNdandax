@@ -12,11 +12,11 @@ api_key = "sk-xkKxdNdIfJBwZQjjZQdZbbNaqVroDoGiXDDaQ57xR6jdihpO"
 if api_key is None:
     raise Exception("Missing Stability API key.")
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def index():
     return render_template('index.html')
 
-@app.route('/generate_image', methods=['POST'])
+@app.route('/generate_image', methods=['POST'], strict_slashes=False)
 def generate_image():
     # Get the text prompt from the request
     text_prompt = request.json.get('text_prompt')
@@ -60,7 +60,7 @@ def generate_image():
 
     return jsonify({'image_filename': image_filename})
 
-@app.route('/get_image/<image_filename>')
+@app.route('/get_image/<image_filename>', strict_slashes=False)
 def get_image(image_filename):
     return send_from_directory('out', image_filename)
 

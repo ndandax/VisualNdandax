@@ -1,0 +1,68 @@
+from flask import Flask, request, send_from_directory, jsonify, render_template
+import requests
+import base64
+import os
+
+app = Flask(__name__)
+
+engine_id = "stable-diffusion-v1-5"
+api_host = os.getenv('API_HOST', 'https://api.stability.ai')
+api_key = "sk-xkKxdNdIfJBwZQjjZQdZbbNaqVroDoGiXDDaQ57xR6jdihpO"
+
+if api_key is None:
+    raise Exception("Missing Stability API key.")
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/generate_image', methods=['POST'])
+def generate_image():
+    # Get the text prompt from the request
+    text_prompt = request.json.get('text_prompt')
+
+    response = requests.post(
+        f"{api_host}/v1/generation/{engine_id}/text-to-image",
+        headers={
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": f"Bearer {api_key}"
+        },
+        json={
+            "text_prompts": [
+                {
+                    "text": text_prompt
+                }
+            ],
+            "cfg_scale": 10,
+            "clip_guidance_preset": "SLOW",
+            "height": 512,
+            "width": 512,
+            "samples": 1,
+            "steps": 50,
+        },
+    )
+
+    if response.status_code != 200:
+        return jsonify({'error': 'Something went wrong while generating the image.'}), 500
+
+    data = response.json()
+
+    # Create the 'out' directory if it doesn't exist
+    os.makedirs('out', exist_ok=True)
+
+    # Save the generated image to the 'out' directory
+    text_prompt_short = text_prompt[:40]
+    for i, image in enumerate(data["artifacts"]):
+        image_filename = f'v1_txt2img_{text_prompt_short}_{i}.png'
+        with open(f"./out/{image_filename}", "wb") as f:
+            f.write(base64.b64decode(image["base64"]))
+
+    return jsonify({'image_filename': image_filename})
+
+@app.route('/get_image/<image_filename>')
+def get_image(image_filename):
+    return send_from_directory('out', image_filename)
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,0 +1,25 @@
+/* styles.css */
+body {
+    margin: 40px; /* Leave some space from the edges */
+}
+
+/* .text-prompt {
+    width: 2cm; /* Set a minimum width of 5cm for the text prompt box */
+    height: 2cm; /* Set a minimum height of 6cm for the text prompt box */
+    padding: 5px;
+    margin-bottom: 10px;
+} */
+
+.generate-button {
+    margin-left: 5px;
+}
+
+/* .image-container {
+    display: flex; /* Display the text prompt and generated image in a flex container */
+    flex-direction: column; /* Arrange them vertically */
+} */
+
+/* .generated-image {
+    margin-top: 10px;
+    align-self: flex-start; /* Align the generated image to the left */
+} */

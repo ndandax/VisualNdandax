@@ -3,7 +3,7 @@ import requests
 import base64
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 engine_id = "stable-diffusion-v1-5"
 api_host = os.getenv('API_HOST', 'https://api.stability.ai')

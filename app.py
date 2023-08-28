@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 engine_id = "stable-diffusion-v1-5"
 api_host = os.getenv('API_HOST', 'https://api.stability.ai')
-api_key = "sk-xkKxdNdIfJBwZQjjZQdZbbNaqVroDoGiXDDaQ57xR6jdihpO"
+api_key = "sk-WwDucZLGOuWvKzM6fPYpCHStKas1MCLu3yHNZcO1JeRJRBqz"
 
 if api_key is None:
     raise Exception("Missing Stability API key.")

@@ -1,5 +1,78 @@
-#text-prompt {
-    width: auto;
-    height: auto;
+
+  .custom-input {
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
     resize: vertical;
+    height: auto;
+}
+
+.custom-input:focus {
+    border-color: #007bff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/*.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}*/
+
+.title1 {
+    font-family: Roboto, sans-serif;
+    margin-bottom: 20px;
+}
+
+/*.intro {
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}*/
+
+#generate-button {
+    background-color: #2ecc71;
+    color: rgb(82, 17, 17);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+#generate-button:hover {
+    background-color: #0cee57;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #093266;
+    position: absolute; 
+    bottom: 0; 
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #image-container img {
+        max-width: 100%;
+        height: auto;
+    }
 }

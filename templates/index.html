@@ -21,15 +21,19 @@
     <div class="container">
     <h1 class="title1">VisualNdandax</h1>
     <div class="intro">
+        <video autoplay loop muted>
+            <source src="videos/background.mp4" type="video/mp4"></video>
         <p>Welcome to VisualNdandax, 💥🔥</p>
         <p>In here you can imagine anything and brings it to life with your imagination</p>
         <br>
+        
     </div>
     <div class="input-container">
 
         <!-- <label for="text-prompt">Enter Text Prompt:</label> -->
         <div>
-            <input type="text" id="text-prompt" class="custom-input" placeholder="Enter your text prompt">
+            <!-- <input type="text" id="text-prompt" class="custom-input" placeholder="Enter your text prompt"> -->
+            <textarea id="text-prompt" class="custom-input" placeholder="Enter your text prompt"></textarea>
         </div>
         <div>
         <button id="generate-button">Generate Image</button>
@@ -40,6 +44,7 @@
     </div>
 
     <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <footer>Enjoy your time with VisualNdandax</footer>
     
 </body>
 <footer>Enjoy your time with VisualNdandax</footer>

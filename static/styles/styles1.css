@@ -1,15 +1,16 @@
 
   .custom-input {
-    width: 25%;
+    width: 25em;
     padding: 10px;
     font-size: 18px;
-    border: 2px solid #ccc;
+    border: 0px solid #ccc;
     transition: border-color 0.2s ease-in-out;
     resize: vertical;
     height: auto;
-    outline: 8px ridge rgba(170, 50, 220, .6);
-    border-radius: 2rem;
+    outline: 4px ridge rgba(170, 50, 220, .6);
+    border-radius: 1rem;
     background-color:whitesmoke;
+    max-height: 80px;
     
 }
 
@@ -22,6 +23,8 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 /*.container {
@@ -51,12 +54,12 @@ body {
     background-color: #2ecc71;
     color: rgb(82, 17, 17);
     border: none;
-    outline:none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 18px;
+    outline: 2px ridge rgba(170, 50, 220, .6);
 }
 
 #generate-button:hover {
@@ -80,8 +83,37 @@ footer {
     }
 }
 
-.video1 video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.introx video {
+    width: auto;
+    height: auto;
+    object-fit: inherit;
   }
+
+  .video-container {
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: auto; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container video {
+    position: absolute;
+    /*top: 0;
+    left: 0;*/
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.intro {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    
+}

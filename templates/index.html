@@ -8,6 +8,7 @@
     </script>
     <script src="{{ url_for('static', filename='/jquery/myjquery.js') }}"></script>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This site generates images from text prompts">
     <meta name="author" content="Seba Ndandala">
@@ -19,16 +20,17 @@
 </head>
 <body>
     <div class="container">
-    <h1 class="title1">VisualNdandax</h1>
-    <div class="intro">
-        <video autoplay loop muted>
-            <source src="videos/background8.mp4" type="video/mp4">
-        </video>
-        <p>Welcome to VisualNdandax, 💥🔥</p>
-        <p>In here you can imagine anything and brings it to life with your imagination</p>
-        <br>
-        
-    </div>
+        <h1 class="title1">VisualNdandax</h1>
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="static/videos/background8.mp4" type="video/mp4">
+            </video>
+            <div class="intro">
+                <p>If only you could see what I have seen with your eyes</p>
+                <p>Welcome to VisualNdandax, 💥🔥</p>
+                <p>In here you can imagine anything and bring it to life with your imagination</p>
+            </div>
+        </div>
     <div class="input-container">
 
         <!-- <label for="text-prompt">Enter Text Prompt:</label> -->

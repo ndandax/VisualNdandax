@@ -7,7 +7,7 @@ $(document).ready(function() {
     const $generateButton = $("#generate-button");
 
     // Set the initial height and the minimum height
-    const minHeight = 40; // Adjust as needed
+    const minHeight = 20; // Adjust as needed
 
     // Update the input's height as new lines are added
     $textPrompt.on("input", function() {

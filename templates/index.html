@@ -25,30 +25,51 @@
             <video autoplay loop muted>
                 <source src="static/videos/background8.mp4" type="video/mp4">
             </video>
-            <div class="intro">
-                <p>If only you could see what I have seen with your eyes</p>
-                <p>Welcome to VisualNdandax, 💥🔥</p>
-                <p>In here you can imagine anything and bring it to life with your imagination</p>
+          <div class="intro">
+                <blockquote class="intro">"If only you could see what I have seen with your eyes"</blockquote>
+                
             </div>
         </div>
-    <div class="input-container">
-
+        <div class="video2">
+            <video autoplay loop muted>
+                <source src="static/videos/background4.mp4" type="video/mp4">
+            </video>
         <!-- <label for="text-prompt">Enter Text Prompt:</label> -->
-        <div>
-            <!-- <input type="text" id="text-prompt" class="custom-input" placeholder="Enter your text prompt"> -->
-            <textarea id="text-prompt" class="custom-input" placeholder="Enter your text prompt"></textarea>
-        </div>
-        <div>
-        <button id="generate-button">Generate Image</button>
-        </div>
-    </div>
+            <div>
+                <p>Welcome to VisualNdandax, 💥🔥</p>
+                 <p>In here you can imagine anything and bring it to life with your imagination</p>
+                 <h2>Introduction</h2>
+                <p>VisualNdandax is an image generator based on Stable diffusion technology. </p>
+                <p>The model was trained by a million number of images. It can create a wide </p>
+                <p> range of images from realistic to artwork and pencil drawings</p>
+            <div class="input-container">
+                <!-- <input type="text" id="text-prompt" class="custom-input" placeholder="Enter your text prompt"> -->
+                <textarea id="text-prompt" class="custom-input" placeholder="Enter your text prompt"></textarea>
+            </div>
+            <div>
+                <button id="generate-button">Generate Image</button>
+            </div>
+        
+            <div id="image-container"></div>
+    
+     </div>
 
-    <div id="image-container"></div>
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+        
+     </div>
     </div>
-
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
-    <footer>Enjoy your time with VisualNdandax</footer>
+    <div class="continuation">
+    <p>jhhgiuw huiwwwwwwwwwwwwwwwwwwwww giuuuuuuuuuuuuuiiiwgfiuiw</p>
+    <p>ijhwgewiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiig b kf hkhkwhkjh h</p>
+    <p>That is because the padding you added to the footer is causing it to overflow </p>
+    <p>the container. To fix this, you can either reduce the amount of padding you added,</p>
+    <p>or you can add a max-height property to the footer. The max-height property will</p>
+    <p>prevent the footer from overflowing the container.</p>
+    </div>
+     <div class="footer">
+        <footer>Enjoy your time with VisualNdandax</footer>
+    </div>
+     
     
 </body>
-<footer>Enjoy your time with VisualNdandax</footer>
 </html>

@@ -50,6 +50,7 @@ $(document).ready(function() {
         }, 3000); // Replace 3000 with the actual time it takes to generate the image
     });
       
+
 });
 
 //$("#text-prompt").on("input", function() {

@@ -39,7 +39,7 @@ def generate_image():
             "height": 512,
             "width": 512,
             "samples": 1,
-            "steps": 50,
+            "steps": 30,
         },
     )
 

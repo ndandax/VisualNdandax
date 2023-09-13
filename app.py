@@ -1,3 +1,4 @@
+"""This is the main flask app for genereration of images using stable diffusion"""
 from flask import Flask, request, send_from_directory, jsonify, render_template
 import requests
 import base64
